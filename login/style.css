@@ -96,6 +96,7 @@ body{
 
 .remember-forgot a:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .wrapper .btn{
@@ -129,5 +130,6 @@ body{
 }
 
 .register-link p a:hover{
+    cursor: pointer;
     text-decoration: underline;
 }

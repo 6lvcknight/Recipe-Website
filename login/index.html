@@ -9,13 +9,43 @@
 </head>
 
 <body>
+    <div class="wrapper" id="signup" style="display:none;">
+        
+        <form method="post" action="register.php">
+            <h1 class="form-title">Register</h1>
 
-    <div class="wrapper">
+            <div class="input-box">
+                <input type="text" name="fName" id="fName" placeholder="First Name" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" name="lName" id="lName" placeholder="Last Name" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <i class='bx bxs-envelope'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+
+            <input type="submit" class="btn" value="Sign Up" name="signUp">
+
+            <div class="register-link">
+                <p>Already Have Account? 
+                    <a id="signInButton">Sign In</a></p>
+            </div>
+        </form>
+    </div>
+
+    <div class="wrapper" id="signIn">
         <form action="">
             <h1>Login</h1>
             <div class="input-box">
-                <input type="text" placeholder="Username" required>
-                <i class='bx bxs-user'></i>
+                <input type="text" placeholder="Email" required>
+                <i class='bx bxs-envelope'></i>
             </div>
             <div class="input-box">
                 <input type="password" placeholder="Password" required>
@@ -26,14 +56,14 @@
                 <a href="#">Forgot password?</a>  
             </div>
             
-            <button type="submit" class="btn">Login</button>
+            <input type="submit" class="btn" value="Sign In" name="Sign In">
 
             <div class="register-link">
                 <p>Don't have an account? 
-                    <a href="#">Register</a></p>
+                    <a id="signUpButton">Sign Up</a></p>
             </div>
         </form>
     </div>
+    <script src="script.js"></script>
 </body>
-
 </html>
