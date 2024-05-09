@@ -1,0 +1,30 @@
+{%extends "base.html" %} {%block title %}Login{% endblock %}
+
+{% block content %}
+<div class="wrapper" id="signIn">
+
+    <form method="post" action="/login">
+        
+        <h1>Login</h1>
+        <div class="input-box">
+            <input type="text" placeholder="Email" required>
+            <i class='bx bxs-envelope'></i>
+        </div>
+        <div class="input-box">
+            <input type="password" placeholder="Password" required>
+            <i class='bx bxs-lock-alt'></i>
+        </div>
+        <div class="remember-forgot">
+            <label><input type="checkbox">Remember me</label>
+            <a href="#">Forgot password?</a>  
+        </div>
+        
+        <input type="submit" class="btn" value="Sign In" name="Sign In">
+
+        <div class="register-link">
+            <p>Don't have an account? 
+                <a id="signUpButton" href="/sign-up">Sign Up</a></p>
+        </div>
+    </form>
+</div>
+{% endblock %}
