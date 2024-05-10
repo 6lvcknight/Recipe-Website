@@ -222,3 +222,11 @@ body{
   .menu-links li:last-child {
     border-bottom: none; /* Removes bottom border from the last item */
   }
+
+  div[role="alert"] {
+    color: red; 
+    margin-top: 10px; 
+    text-align: center;
+    font-size: 14.5px;
+    margin: 20px 0 15px;
+  }

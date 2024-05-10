@@ -20,34 +20,18 @@
             <span></span>
         </div>
         <ul class="menu-links">
+            {% if user.is_authenticated %}
             <li><a id="home" href="/">Home</a></li>
+            <li><a id="Favourite" href="#">Favourite</a></li>
+            <li><a id="Favourite" href="#">My Recipes</a></li>
+            <li><a id="Account" href="#">Account</a></li>
+            <li><a id="logout" href="/logout">Logout</a></li>
+            {% else %}
             <li><a id="login" href="/login">Login</a></li>
             <li><a id="signUp" href="/sign-up">Sign Up</a></li>
-            <li><a id="logout" href="/logout">Logout</a></li>
+            {% endif %}
         </ul>
     </nav>
-
-    {% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-        {% for category, message in messages %}
-        {% if category == 'error' %}
-        <div role="alert">
-            {{ message }}
-            <button type="button" data-dismiss="alert">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        {% else %}
-        <div role="alert">
-            {{ message }}
-            <button type="button" data-dismiss="alert">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        {% endif %}
-        {% endfor %}
-    {% endif %}
-    {% endwith %}
 
     <div class="container">
         {% block content %}

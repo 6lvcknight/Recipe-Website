@@ -1,9 +1,9 @@
-{%extends "base.html" %} {%block title %}Login{% endblock %}
+{%extends "base.html" %} {%block title %}Sign Up{% endblock %}
 
 {% block content %}
 <div class="wrapper" id="signup">
         
-    <form method="post" action="/register">
+    <form method="POST">
 
         <h1>Register</h1>
         <div class="input-box">
@@ -28,6 +28,7 @@
         </div>
 
         <input type="submit" class="btn" value="Sign Up" name="signUp">
+        {% include 'flash_messages.html' %}
 
         <div class="register-link">
             <p>Already Have Account? 
